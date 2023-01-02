@@ -1,4 +1,6 @@
-# Note: this challenge is intendede to be tricky, traditional dy/dx won't work! 
+# Note: this challenge is intendede to be tricky, traditional float division dy/dx won't work! either use multiplication, ir leverage the Decimal class
+## When using Decimal, remember to write the syntax like this `Decimal(Decimal(y2-y1)/Decimal(x2-x1))`
+
 
 class Solution:
     def minimumLines(self, stockPrices: List[List[int]]) -> int:
