@@ -9,7 +9,7 @@ class Solution:
             maskLenMap[mask] = max(len(word), maskLenMap[mask])
         
         ans = 0
-        for mask1, mask2 in product(maskLenMap, repeat = 2):
+        for mask1, mask2 in combinations(maskLenMap, 2):
             if not mask1 & mask2:
                 ans = max(ans, maskLenMap[mask1] * maskLenMap[mask2])
         
